@@ -42,12 +42,12 @@ This project consists of the deployment of the UI of an application on an EKS cl
 ## Security
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/security.png)
 
-With the 4 C’s of cloud native security in mind, security has been integrated:
-- The CI/CD pipeline for the cluster contains code quality checks and security checks of the template and the CI/CD pipeline for the deployment contains a scan of the image container, code quality checks, and       security checks of the template.
-- The containers are also secured at the pod level through SGs, restricted pod access to instance metadata service, network policy to restrict network traffic within cluster and RBAC. 
+With the 4 C’s of cloud native security in mind, security has been integrated at every layer of the infrastructure:
+- The CI/CD pipeline for the cluster contains code quality checks and security checks of the template and the CI/CD pipeline for the deployment contains a scan of the image container, code quality checks, and security checks of the template.
+- The containers are also secured at the pod level through Security Groups, restricted pod access to instance metadata service, network policy to restrict network traffic within cluster, and Role Based Access Control. 
 - The cluster is also secured by making the endpoint private/Deny all global policy, then allow port 53 egress to kube-system. 
 - The API is secured in the cloud with a Web Application Firewall.
 
 Additions that would improve the design:
 - Running AWS Inspector to continually assess vulnerabilities and alignment with security best practices.
-- Writing audit logs to S3 to monitor the cluster with AWS GuardDuty to detect potentially suspicious activities.
+- Writing audit logs to S3 to monitor the cluster with AWS GuardDuty and detect potentially suspicious activities.
