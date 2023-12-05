@@ -1,6 +1,6 @@
 # Retail Store UI Deployment and Monitoring 
 This project consists of the deployment of the UI of an application on an EKS cluster complete with monitoring and logging, and load simulation to test endpoint and auto scaling.
-![](https://github.com/smithashley/Retail-Store-UI-Deployment/tree/main/embedded_images/ui.png)
+![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/ui.png)
 
 ## Steps of Deployment
 1.	Create CI/CD pipelines with code scanner, container image scanner
