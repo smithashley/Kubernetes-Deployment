@@ -3,7 +3,7 @@ This project consists of the deployment of the UI of an application on an EKS cl
 
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/ui.png)
 
-## Steps of Deployment
+## Details of the Deployment
 - Create CI/CD pipelines with code scanner, container image scanner
 - Configure VPC, subnets, Security Groups to reference in cft template
 - Deploy cluster
