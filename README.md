@@ -1,38 +1,35 @@
 # Retail Store UI Deployment and Monitoring 
-This project consists of the deployment of the UI of an application on an EKS cluster complete with monitoring and logging, and load simulation to test endpoint and auto scaling.
-
+This project consists of the deployment of the UI of a secure application on an EKS cluster complete with monitoring of metrics, and load simulation to test monitoring and auto scaling. 
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/ui.png)
 
 ## Details of the Deployment
-- Create CI/CD pipelines with code scanner, container image scanner
-- Configure VPC, subnets, Security Groups to reference in cft template
+- Create CI/CD pipelines for the deployment of the Kubernetes cluster, UI of the app, Prometheus, Grafana, VPC, and ALB
+- Configure VPC, Subnets, and Security Groups 
 - Deploy cluster
-    - Configure EKS cluster endpoint to be private
+    - Configure EKS cluster with private endpoint
     - Deploy worker nodes onto private subnets
     - Deny all global policy, then allow port 53 egress to kube-system
-    - RBAC + IAM = IAM roles for service accounts (least privilege)
+    - Set up Role Based Access Control using IAM roles for service accounts (least privilege)
       - Service Accounts for Pods
       - Service Role for Prometheus
       - Service Role for Grafana
-      - Admin (will use this access, nonroot user)
+      - Admin 
       - Developers
       - ReadOnly
-- Install helm
-- Deploy app on EKS Amazon Linux 2 or Bottlerocket (security first AMIs) with Horizontal or Vertical Pod Auto scaler
+- Deploy UI 
+    - Horizontal or Vertical Pod Auto scaler
     - SGs, restrict pod access to instance metadata service, use netpol to restrict network traffic within cluster
 - Set up monitoring
     - Install Prometheus
     - Deploy Prometheus operator and services and write CR for monitoring
     - Deploy Grafana
 - Set up LB
-    - Configure services 
-    - ALB controller
+    - Configure service
+    - ALB controller 
     - Route53
     - WAF
 - Run load simulation using Distributed Load Testing
-- Document pipeline templates, yaml templates, and quick snap of the app ui, url, and Grafana dashboard
-    - Monitor k8s control plane Prometheus metrics
-    - Visualize metrics in Amazon Grafana
+    - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
 ## Monitoring
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/grafana.png)
