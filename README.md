@@ -1,5 +1,6 @@
 # Retail Store UI Deployment and Monitoring 
 This project consists of the deployment of the UI of a secure application on an EKS cluster complete with monitoring of metrics, and load simulation to test monitoring and auto scaling. 
+
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/ui.png)
 
 ## Details of the Deployment
