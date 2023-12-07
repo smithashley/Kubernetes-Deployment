@@ -26,7 +26,7 @@ spec:
               drop:
               - ALL
             allowPrivilegeEscalation: false
-          image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-webui:latest
           imagePullPolicy: Always
           ports:
             - name: http
