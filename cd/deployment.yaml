@@ -12,10 +12,10 @@ spec:
       app: my-retail-store
   template:
     metadata:
-      # annotations:
-      #   prometheus.io/path: /metrics
-      #   prometheus.io/port: "8080"
-      #   prometheus.io/scrape: "true"
+      annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
       labels:
         app: my-retail-store
     spec:
@@ -30,23 +30,16 @@ spec:
           imagePullPolicy: Always
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8080
               livenessProbe:
                 httpGet:
-                  path: /status
-                  port: 80
-                initialDelaySeconds: 3
-                periodSeconds: 3
-              readinessProbe:
-                httpGet:
-                  path: /ready
-                  port: 80
-                initialDelaySeconds: 3
+                  path: /health
+                  port: 8080
+                initialDelaySeconds: 30
                 periodSeconds: 3
           resources:
             limits:
-              cpu: 300m
               memory: 256Mi
             requests:
-              cpu: 200m
-              memory: 128Mi
+              cpu: 250m
+              memory: 256Mi
