@@ -13,5 +13,5 @@ spec:
     matchLabels:
       app: my-retail-store
   endpoints:
-    - port: http-metrics
+    - port: http
       path: /metrics
