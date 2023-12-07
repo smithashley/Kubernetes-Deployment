@@ -21,13 +21,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          securityContext:
-            capabilities:
-              drop:
-              - ALL
-            allowPrivilegeEscalation: false
           image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-webui:latest
           imagePullPolicy: Always
           ports:
-            - name: http
-              containerPort: 8080
+            - containerPort: 8080
