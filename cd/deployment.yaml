@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-retail-store
+  name: my-tea-store
   namespace: staging
   labels:
-    app: my-retail-store
+    app: my-tea-store
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-retail-store
+      app: my-tea-store
   template:
     metadata:
       annotations:
@@ -17,16 +17,16 @@ spec:
         prometheus.io/port: "8080"
         prometheus.io/scrape: "true"
       labels:
-        app: my-retail-store
+        app: my-tea-store
     spec:
       containers:
-        - name: my-retail-store
+        - name: my-tea-store
           securityContext:
             capabilities:
               drop:
               - ALL
             allowPrivilegeEscalation: false
-          image: public.ecr.aws/seb-demo/docker-2048:latest
+          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-loadgen:latest
           imagePullPolicy: Always
           ports:
             - name: http
