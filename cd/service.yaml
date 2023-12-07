@@ -11,3 +11,11 @@ spec:
       targetPort: http
   selector:
     app: my-retail-store
+  template:
+    metadata:
+      annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
+      labels:
+        app: my-retail-store
