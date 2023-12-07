@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-retail-store
-  namespace: ui
+  namespace: staging
   labels:
     app: my-retail-store
 spec:
