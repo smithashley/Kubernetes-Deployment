@@ -4,7 +4,7 @@ metadata:
   name: retail-store-pod-monitor
   namespace: staging
   labels:
-    prometheus: main
+    prometheus: prometheus-kube-prometheus-prometheus
 spec:
   namespaceSelector:
     matchNames:
