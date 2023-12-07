@@ -26,7 +26,7 @@ spec:
               drop:
               - ALL
             allowPrivilegeEscalation: false
-          image: public.ecr.aws/eks-anywhere/hello-eks-anywhere:0.1.2-c014c0e09013bc7dcea65cc982712946d50ce582
+          image: public.ecr.aws/aws-containers/ecsdemo-frontend:latest
           imagePullPolicy: Always
           ports:
             - name: http
