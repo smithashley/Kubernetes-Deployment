@@ -3,12 +3,6 @@ kind: Service
 metadata:
   namespace: staging
   name: retail-store-service
-  annotations:
-        prometheus.io/path: /metrics
-        prometheus.io/port: "8080"
-        prometheus.io/scrape: "true"
-      labels:
-        app: my-retail-store
 spec:
   type: ClusterIP
   ports:
