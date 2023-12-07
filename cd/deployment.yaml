@@ -26,7 +26,7 @@ spec:
               drop:
               - ALL
             allowPrivilegeEscalation: false
-          image: public.ecr.aws/r7g7t8c3/sample-web-app:latest
+          image: public.ecr.aws/p0n5e1d1/where-for-dinner-ui:latest
           imagePullPolicy: Always
           ports:
             - name: http
