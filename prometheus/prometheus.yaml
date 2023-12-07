@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
-  name: main
+  name: prometheus-kube-prometheus-prometheus
   namespace: monitoring
 spec:
   alerting:
@@ -11,7 +11,7 @@ spec:
         port: web
   ruleSelector:
     matchLabels:
-      prometheus: main
+      prometheus: prometheus-kube-prometheus-prometheus
   ruleNamespaceSelector:
     matchLabels:
       monitoring: prometheus
@@ -19,19 +19,19 @@ spec:
   serviceAccountName: prometheus
   podMonitorSelector:
     matchLabels:
-      prometheus: main
+      prometheus: prometheus-kube-prometheus-prometheus
   podMonitorNamespaceSelector:
     matchLabels:
       monitoring: prometheus
   serviceMonitorSelector:
     matchLabels:
-      prometheus: main
+      prometheus: prometheus-kube-prometheus-prometheus
   serviceMonitorNamespaceSelector:
     matchLabels:
       monitoring: prometheus
   probeSelector:
     matchLabels:
-      prometheus: main
+      prometheus: prometheus-kube-prometheus-prometheus
   probeNamespaceSelector:
     matchLabels:
       monitoring: prometheus
@@ -54,3 +54,9 @@ spec:
     fsGroup: 0
     runAsNonRoot: false
     runAsUser: 0
+  storage:
+      volumeClaimTemplate:
+        spec:
+          resources:
+            requests:
+              storage: 20Gi
