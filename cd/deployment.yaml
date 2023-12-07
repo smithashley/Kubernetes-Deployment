@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-tea-store
+  name: tea-store
   namespace: staging
   labels:
-    app: my-tea-store
+    app: tea-store
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-tea-store
+      app: tea-store
   template:
     metadata:
       annotations:
@@ -17,10 +17,10 @@ spec:
         prometheus.io/port: "8080"
         prometheus.io/scrape: "true"
       labels:
-        app: my-tea-store
+        app: tea-store
     spec:
       containers:
-        - name: my-tea-store
+        - name: tea-store
           securityContext:
             capabilities:
               drop:
