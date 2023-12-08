@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/sumologic/the-coffee-bar:frontend-v0.1.4
+          image: public.ecr.aws/acies/demowebshop:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
