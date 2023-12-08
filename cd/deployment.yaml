@@ -19,5 +19,14 @@ spec:
         - name: tea-store
           image: ruecarlo/monte-carlo-pi-service
           imagePullPolicy: Always
+          resources: 
+            requests: 
+              memory: "512Mi" 
+              cpu: "1024m" 
+            limits: 
+              memory: "512Mi" 
+              cpu: "1024m" 
+          securityContext: 
+            allowPrivilegeEscalation: false 
           ports:
             - containerPort: 80
