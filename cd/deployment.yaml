@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/i9l0l1r7/aws-workshop/redis-retail:latest
+          image: public.ecr.aws/kv-sandbox/k8s-workshop:m3
           imagePullPolicy: Always
           ports:
             - containerPort: 80
