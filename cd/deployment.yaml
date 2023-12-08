@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-image:latest
+          image: public.ecr.aws/dsalamanca/stepfunc-sample-goapp:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
