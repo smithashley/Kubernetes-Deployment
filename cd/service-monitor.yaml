@@ -6,7 +6,7 @@ metadata:
 spec:
   endpoints:
   - interval: 30s
-    port: 8082
+    port: http
   selector:
     matchLabels:
       app: tea-store
