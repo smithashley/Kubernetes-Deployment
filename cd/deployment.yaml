@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/u2g6w7p2/eks-workshop-demo/product_catalog:10.0
+          image: public.ecr.aws/tanzu_observability_demo_app/to-demo/delivery:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
