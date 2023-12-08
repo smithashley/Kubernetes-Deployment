@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/r9u2q4e0/my-static-website:latest
+          image: public.ecr.aws/i1j2j4g5/k8s-website-hugo:v0.82.0-15c3a1cd2ebd
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
