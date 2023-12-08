@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/d8d9f1a0/ecommerce-website:latest
+          image: public.ecr.aws/r4d2x0n7/ecr-demo:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
