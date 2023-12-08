@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/i1j2j4g5/k8s-website-hugo:v0.82.0-15c3a1cd2ebd
+          image: public.ecr.aws/z2l3b7u6/sportsbuzz11-website:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
