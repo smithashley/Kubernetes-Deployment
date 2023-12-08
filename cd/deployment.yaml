@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/dsalamanca/stepfunc-sample-goapp:latest
+          image: public.ecr.aws/ecs-sample-image/amazon-ecs-sample:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
