@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/n1j5y7a0/sample-repo:hello-world
+          image: public.ecr.aws/pahudnet/flask-docker-sample:437f0c3
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
