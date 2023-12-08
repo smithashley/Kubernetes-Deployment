@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/vitavi/website-build-image:latest
+          image: public.ecr.aws/d8d9f1a0/ecommerce-website:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
