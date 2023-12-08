@@ -19,5 +19,5 @@ spec:
         - name: tea-store
           image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-webui:latest
           imagePullPolicy: Always
-      ports:
-        - containerPort: 8081
+          ports:
+            - containerPort: 8081
