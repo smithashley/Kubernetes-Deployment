@@ -15,7 +15,7 @@ spec:
   selector:
     app: tea-store
 ---
-apiVersion: networking.k8s.io/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: tea-ingress
@@ -23,18 +23,11 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
-    alb.ingress.kubernetes.io/target-type: instance
-    alb.ingress.kubernetes.io/subnets: subnet-0ae4339691f94382d,subnet-07bd4c4af989fe604
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP":80}]'
-    alb.ingress.kubernetes.io/healthcheck-port: traffic-port
 spec:
   rules:
     - http:
         paths:
           - path: /store
-            pathType: Exact
             backend:
-              service:
-                 name: "tea-store-service"
-                 port:
-                   number: 80
+              serviceName: tea-store-service
+                 servicePort: 80
