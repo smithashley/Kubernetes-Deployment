@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: nginx:mainline-alpine
+          image: nginx/nginx:mainline-alpine
           imagePullPolicy: Always
