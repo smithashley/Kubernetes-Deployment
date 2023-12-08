@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/eks-upgrades-workshop/eks-validate-image:latest
+          image: brentley/ecsdemo-nodejs:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
