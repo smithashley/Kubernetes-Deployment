@@ -4,12 +4,12 @@ metadata:
   name: tea-store
   namespace: staging
   labels:
-    app: tea-store
+    app: tea-store-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tea-store
+      app: tea-store-app
   template:
     metadata:
       annotations:
@@ -17,7 +17,7 @@ spec:
         prometheus.io/port: "80"
         prometheus.io/scrape: "true"
       labels:
-        app: tea-store
+        app: tea-store-app
     spec:
       containers:
         - name: tea-store
