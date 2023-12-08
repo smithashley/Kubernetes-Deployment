@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/aws-containers/sfw-process-video:latest
+          image: public.ecr.aws/l6m2t8p7/docker-2048:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
