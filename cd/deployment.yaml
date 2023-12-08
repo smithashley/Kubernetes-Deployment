@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: k8s.gcr.io/e2e-test-images/echoserver:latest
+          image: k8s.gcr.io/pause:3.5
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
