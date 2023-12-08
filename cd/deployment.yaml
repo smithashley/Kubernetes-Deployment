@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/docker/library/hello-world:linux
+          image: public.ecr.aws/docker/library/hello-world:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
