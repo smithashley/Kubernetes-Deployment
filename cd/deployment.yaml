@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: registry.example.com/mynamespace/myproject/image:latest
+          image: public.ecr.aws/l6m2t8p7/docker-2048:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8081
+            - containerPort: 80
