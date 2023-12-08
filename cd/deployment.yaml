@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/rafay-dev/gen-ai-sample-chat-app:latest
+          image: public.ecr.aws/s1s3p4u3/public-static-site:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
