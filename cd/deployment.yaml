@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/unocha/common-design-site:develop
+          image: public.ecr.aws/w5f1i5u6/soon-site:wordpress
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
