@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/l6m2t8p7/docker-2048:latest
+          image: public.ecr.aws/docker/library/hello-world:nanoserver-ltsc2022
           imagePullPolicy: Always
           ports:
             - containerPort: 80
