@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/sumologic/opentelemetry-petclinic:latest
+          image: public.ecr.aws/q7t7b3t3/demo-app/shopping:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
