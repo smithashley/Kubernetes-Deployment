@@ -3,6 +3,8 @@ kind: Service
 metadata:
   namespace: staging
   name: tea-store-service
+  labels:
+    app: tea-store-app
 spec:
   type: NodePort
   ports:
@@ -10,7 +12,7 @@ spec:
       port: 80
       targetPort: 80
   selector:
-    app: tea-store
+    app: tea-store-app
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
