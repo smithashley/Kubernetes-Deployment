@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/bostonuniversity/apache-static-sites:latest
+          image: public.ecr.aws/vitavi/website-build-image:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
