@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: us.gcr.io/k8s-artifacts-prod/e2e-test-images/kitten
+          image: k8s.gcr.io/e2e-test-images/echoserver:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
