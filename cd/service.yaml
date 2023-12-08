@@ -27,4 +27,4 @@ spec:
           - path: /store
             backend:
               serviceName: tea-store-service
-                servicePort: 80
+              servicePort: 80
