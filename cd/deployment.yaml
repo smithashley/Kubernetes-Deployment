@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: busybox
+          image: registry.example.com/mynamespace/myproject/image:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8081
