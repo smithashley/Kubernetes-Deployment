@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/seb-demo/eks-example-go:6d1d832508017919344c62c5eaece159fccffa79
+          image: public.ecr.aws/seb-demo/sample-ui-code:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
