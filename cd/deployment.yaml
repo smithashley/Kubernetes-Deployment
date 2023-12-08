@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/w6x8d2y7/jumpstart_workshop_app:latest
+          image: public.ecr.aws/itstratdevreg/samplenextjsapp:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
