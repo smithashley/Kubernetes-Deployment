@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/pahudnet/flask-docker-sample:437f0c3
+          image: public.ecr.aws/one-observability-workshop/demo-sampleapp:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
