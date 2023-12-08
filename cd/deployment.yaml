@@ -14,7 +14,7 @@ spec:
     metadata:
       annotations:
         prometheus.io/path: /metrics
-        prometheus.io/port: "8080"
+        prometheus.io/port: "80"
         prometheus.io/scrape: "true"
       labels:
         app: tea-store
@@ -24,4 +24,4 @@ spec:
           image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-webui:latest
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080
+            - containerPort: 80
