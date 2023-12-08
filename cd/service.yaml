@@ -15,19 +15,24 @@ spec:
   selector:
     app: tea-store
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: tea-ingress
+  name: staging-ingress
   namespace: staging
   annotations:
-    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/healthcheck-path: /healthz
 spec:
+  ingressClassName: alb
   rules:
     - http:
         paths:
           - path: /store
+            pathType: Exact
             backend:
-              serviceName: tea-store-service
-              servicePort: 80
+              service
+                name: tea-store-service
+                port: 
+                  name: http
