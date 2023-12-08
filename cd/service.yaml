@@ -32,7 +32,7 @@ spec:
           - path: /store
             pathType: Exact
             backend:
-              service
+              service:
                 name: tea-store-service
                 port: 
                   name: http
