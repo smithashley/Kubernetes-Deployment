@@ -18,14 +18,13 @@ metadata:
   name: tea-ingress
   namespace: staging
   annotations:
+    kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
 spec:
-  ingressClassName: alb
   rules:
     - http:
         paths:
           - path: /store
-            pathType: Exact
             backend:
               serviceName: tea-store-service
               servicePort: 80
