@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-website
+  namespace: staging
+  labels:
+    app: my-website
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-website
+  template:
+    metadata:
+      labels:
+        app: my-website
+    spec:
+      containers:
+        - name: website
+          image: public.ecr.aws/r9u2q4e0/my-static-website:latest
+          imagePullPolicy: Always
+          securityContext: 
+            allowPrivilegeEscalation: false 
+          ports:
+            - containerPort: 80
