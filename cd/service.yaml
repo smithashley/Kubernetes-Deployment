@@ -4,7 +4,7 @@ metadata:
   namespace: staging
   name: tea-store-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - protocol: TCP
       port: 80
@@ -12,22 +12,22 @@ spec:
   selector:
     app: tea-store
 ---
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: ts-ingress
-#   namespace: staging
-#   annotations:
-#     alb.ingress.kubernetes.io/scheme: internet-facing
-# spec:
-#   ingressClassName: alb
-#   rules:
-#     - http:
-#         paths:
-#           - path: /
-#             pathType: Exact
-#             backend:
-#               service:
-#                 name: tea-store-service
-#                 port: 
-#                   name: http
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: teas-ingress
+  namespace: staging
+  annotations:
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  ingressClassName: alb
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Exact
+            backend:
+              service:
+                name: tea-store-service
+                port: 
+                  number: 80
