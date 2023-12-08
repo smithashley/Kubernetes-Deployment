@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/seb-demo/docker-2048:latest
+          image: public.ecr.aws/i9l0l1r7/aws-workshop/redis-retail:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
