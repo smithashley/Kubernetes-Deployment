@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: nginx:alpine
+          image: hello
           imagePullPolicy: Always
           ports:
             - containerPort: 80
