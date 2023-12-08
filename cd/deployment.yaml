@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/c1f3h5w3/27global/public/ecs-marketplace-demo:latest
+          image: public.ecr.aws/e1x6y8e1/blue:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
