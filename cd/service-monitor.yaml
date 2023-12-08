@@ -6,7 +6,7 @@ metadata:
 spec:
   endpoints:
   - interval: 30s
-    targetPort: 9090
+    # targetPort: 9090
     port: http
   selector:
     matchLabels:
