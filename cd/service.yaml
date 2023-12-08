@@ -3,13 +3,10 @@ kind: Service
 metadata:
   namespace: staging
   name: tea-store-service
-  labels:
-    app: tea-store
 spec:
   type: LoadBalancer
   ports:
-    - name: http
-      protocol: TCP
+    - protocol: TCP
       port: 80
       targetPort: 80
   selector:
