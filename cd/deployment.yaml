@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/m3x5o2v9/istio-tpr-app:latest
+          image: public.ecr.aws/o3t4o8m2/workshop-sample-app:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
