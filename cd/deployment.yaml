@@ -4,16 +4,16 @@ metadata:
   name: tea-store
   namespace: staging
   labels:
-    app: tea-store-app
+    app: tea-store
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tea-store-app
+      app: tea-store
   template:
     metadata:
       labels:
-        app: tea-store-app
+        app: tea-store
     spec:
       containers:
         - name: tea-store
