@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/a8u6m7l5/neptune-chatbot:latest
+          image: lipanski/docker-static-website:latest
           imagePullPolicy: Always
           securityContext: 
             allowPrivilegeEscalation: false 
