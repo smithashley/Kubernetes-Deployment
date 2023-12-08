@@ -17,5 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: docker/hello-world:latest
+          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-webui:latest
           imagePullPolicy: Always
+      ports:
+            - containerPort: 8081
