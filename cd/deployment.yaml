@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: hello-world
+          image: docker/hello-world:latest
           imagePullPolicy: Always
