@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/seb-demo/monte-carlo-pi-service:latest
+          image: public.ecr.aws/seb-demo/docker-2048:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
