@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/ecs-sample-image/hello-server:node
+          image: public.ecr.aws/ecs-sample-image/hello-server:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
