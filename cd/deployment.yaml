@@ -17,5 +17,5 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: nginx
+          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-loadgen:latest
           imagePullPolicy: Always
