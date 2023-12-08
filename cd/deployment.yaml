@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/aws-containers/retail-store-sample-ui:0.5.0
+          image: public.ecr.aws/d8i9k4x3/fso-lab-teastore-image:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
