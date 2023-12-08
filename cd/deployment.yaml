@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/kv-sandbox/k8s-workshop:m3
+          image: public.ecr.aws/eks-upgrades-workshop/eks-validate-image:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
