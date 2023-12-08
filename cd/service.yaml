@@ -18,7 +18,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: staging-ingress
+  name: store-ingress
   namespace: staging
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
