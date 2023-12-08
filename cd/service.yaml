@@ -27,5 +27,7 @@ spec:
           - path: /store
             pathType: Exact
             backend:
-              serviceName: tea-store-service
-              servicePort: 80
+              service:
+                 name: "tea-store-service"
+                 port:
+                   number: 80
