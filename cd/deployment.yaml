@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: tea-store
-          image: public.ecr.aws/ecs-sample-image/name-server:latest
+          image: public.ecr.aws/one-observability-workshop/demo-sampleapp:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 80
