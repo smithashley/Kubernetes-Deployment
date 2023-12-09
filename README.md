@@ -6,16 +6,16 @@ This project consists of the deployment of a static website on an EKS cluster co
 ## Steps
 - Configured VPC, Subnets, and Security Groups using CloudFormation
 - Deployed EKS cluster using CloudFormation
+- Created namespaces to isolate resources
 - Installed Helm
     - https://helm.sh/ 
-- Installed the Helm chart for ArgoCD 
+- Installed Helm chart for ArgoCD 
     - https://artifacthub.io/packages/helm/argo/argocd-apps/
-- Installed the Helm chart for the Prometheus operator
+- Installed Helm chart for the Prometheus operator
     -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack/
 - Deployed static website using ArgoCD
-![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG)
-
   - Custom Object
+ 
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -25,7 +25,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/smithashley/Tea-Store.git
+    repoURL: https://github.com/smithashley/Kubernetes-Deployment-1.git
     targetRevision: HEAD
     path: website
   destination:
@@ -37,9 +37,12 @@ spec:
       selfHeal: true
       allowEmpty: false     
 ```
+
+- This deployment is complete with a horizontal pod autoscaler, service, service monitor, and ingress
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG)
     
-- Created Service Account for Application Load Balancer
-- Installed the Helm chart for the AWS Load Balancer Controller
+- Created Service Account for the Load Balancer
+- Installed Helm chart for the AWS Load Balancer Controller
     - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller/ 
 - Ran load test to simulate traffic
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/ ???
@@ -49,11 +52,11 @@ spec:
 
 ### Key symptoms to monitor Latency, Errors, and Traffic:
 - Resource utilization: Monitor CPU, memory, and disk usage trends for pods, containers, and nodes. Alert on anomalies that deviate from normal patterns, indicating potential resource bottlenecks.
-    - Application performance: Track metrics like response times, error rates, and request latencies for your applications. Alert on rising trends or spikes, indicating potential performance degradation.
+- Application performance: Track metrics like response times, error rates, and request latencies for your applications. Alert on rising trends or spikes, indicating potential performance degradation.
 - Pod health: Monitor pod liveness and readiness probes to ensure pods are healthy and functioning. Alert on unhealthy pods to identify potential application issues or infrastructure problems.
 - Configuration changes: Monitor for configuration changes made to deployments, pods, and services. Alert on unexpected changes to identify potential errors or security risks.
 
-The proactive approach is to monitor the cluster for symptoms that indicate potential issues before they escalate into outages:
+Proactive approach to monitor the cluster for symptoms that indicate potential issues before they escalate into outages:
 - Define alert thresholds and rules:
     - Set thresholds based on historical data and expected behavior.
     - Define alert rules in Prometheus to trigger alerts when thresholds are crossed.
