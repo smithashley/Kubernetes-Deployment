@@ -54,18 +54,18 @@ spec:
 
 The proactive approach is to monitor the cluster for symptoms that indicate potential issues before they escalate into outages:
     -	Define alert thresholds and rules:
-        o	Set thresholds based on historical data and expected behavior.
-        o	Define alert rules in Prometheus to trigger alerts when thresholds are crossed.
-        o	Configure Alertmanager to route alerts to the appropriate channels (e.g., Slack, email, PagerDuty).
+        -	Set thresholds based on historical data and expected behavior.
+        -	Define alert rules in Prometheus to trigger alerts when thresholds are crossed.
+        -	Configure Alertmanager to route alerts to the appropriate channels (e.g., Slack, email, PagerDuty).
     -	Set up automated workflows to trigger remediation actions based on specific alerts.
     -	Prioritize alerts based on severity:
-        o	Utilize multi-level alerting based on severity.
-        o	Focus on higher-severity alerts that require immediate attention.
-        o	Investigate and resolve lower-severity alerts before they escalate.
+        -	Utilize multi-level alerting based on severity.
+        -	Focus on higher-severity alerts that require immediate attention.
+        -	Investigate and resolve lower-severity alerts before they escalate.
     -	Review:
-        o	Regularly review the effectiveness of your monitoring system and alert rules.
-        o	Analyze historical data to identify potential gaps and improve symptom detection.
-        o	Refine your thresholds and rules based on observed behavior and operational needs.
+        -	Regularly review the effectiveness of your monitoring system and alert rules.
+        -	Analyze historical data to identify potential gaps and improve symptom detection.
+        -	Refine your thresholds and rules based on observed behavior and operational needs.
 Benefits:
 -	Improved incident response times
 -	Proactive problem identification and resolution
