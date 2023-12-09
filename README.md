@@ -44,7 +44,7 @@ spec:
 - Installed Helm chart for the AWS Load Balancer Controller
     - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller/ 
 - Ran load test to simulate traffic
-    - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/ ???
+    - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
 ## Monitoring
 ![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/grafana.png)
@@ -75,7 +75,3 @@ Benefits:
 - Reduced downtime and service disruptions
 - Increased application performance and reliability
 - Enhanced visibility into your Kubernetes environment
-
-Additions that would improve the design:
-- Running AWS Inspector to continually assess vulnerabilities and alignment with security best practices.
-- Writing audit logs to S3 to monitor the cluster with AWS GuardDuty and detect potentially suspicious activities.
