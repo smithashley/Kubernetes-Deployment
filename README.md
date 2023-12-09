@@ -38,6 +38,7 @@ spec:
       allowEmpty: false     
 ```
 
+    
     - This deployment is complete with a horizontal pod autoscaler, service, service monitor, and ingress
 ![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG)
     
