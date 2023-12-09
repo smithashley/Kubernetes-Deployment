@@ -9,9 +9,9 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Installed Helm
     - https://helm.sh/ 
 - Deployed ArgoCD using Helm
-    - https://artifacthub.io/packages/helm/argo/argocd-apps 
+    - https://artifacthub.io/packages/helm/argo/argocd-apps/
 - Deployed Prometheus operator using Helm
-    -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack
+    -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack/
 - Deployed static website using ArgoCD using Custom Resource
   
 ```
@@ -38,7 +38,7 @@ spec:
 ```
     
 - Deployed Application Load Balancer controller using Helm
-    - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller 
+    - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller/ 
 - Run load simulation using Distributed Load Testing
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
