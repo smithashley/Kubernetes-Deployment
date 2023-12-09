@@ -12,8 +12,8 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Deploy Prometheus operator using Helm
 - Deploy static website using ArgoCD
   
-  ```
-  apiVersion: argoproj.io/v1alpha1
+```
+apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: website-app
@@ -33,7 +33,7 @@ spec:
       selfHeal: true
       allowEmpty: false     
     - Horizontal or Vertical Pod Auto scaler
-    ```
+```
     
 - Deploy application load balancer controller using Helm
 - Run load simulation using Distributed Load Testing
