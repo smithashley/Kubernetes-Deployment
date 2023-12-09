@@ -8,14 +8,14 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Deployed EKS cluster using CloudFormation
 - Installed Helm
     - https://helm.sh/ 
-- Deployed ArgoCD using Helm
+- Installed the Helm chart for ArgoCD 
     - https://artifacthub.io/packages/helm/argo/argocd-apps/
-- Deployed Prometheus operator using Helm
+- Installed the Helm chart for the Prometheus operator
     -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack/
 - Deployed static website using ArgoCD
 ![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG)
 
-  - Custom Resource
+  - Custom Object
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -36,11 +36,10 @@ spec:
       prune: true
       selfHeal: true
       allowEmpty: false     
-    - Horizontal or Vertical Pod Auto scaler
 ```
     
 - Created Service Account for Application Load Balancer
-- Deployed Controller for Application Load Balancer using Helm
+- Installed the Helm chart for the AWS Load Balancer Controller
     - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller/ 
 - Ran load test to simulate traffic
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/ ???
@@ -55,25 +54,25 @@ spec:
 - Configuration changes: Monitor for configuration changes made to deployments, pods, and services. Alert on unexpected changes to identify potential errors or security risks.
 
 The proactive approach is to monitor the cluster for symptoms that indicate potential issues before they escalate into outages:
-    - Define alert thresholds and rules:
-        - Set thresholds based on historical data and expected behavior.
-        - Define alert rules in Prometheus to trigger alerts when thresholds are crossed.
-        - Configure Alertmanager to route alerts to the appropriate channels (e.g., Slack, email, PagerDuty).
-    - Set up automated workflows to trigger remediation actions based on specific alerts.
-    - Prioritize alerts based on severity:
-        - Utilize multi-level alerting based on severity.
-        - Focus on higher-severity alerts that require immediate attention.
-        - Investigate and resolve lower-severity alerts before they escalate.
-    - Review:
-        - Regularly review the effectiveness of your monitoring system and alert rules.
-        - Analyze historical data to identify potential gaps and improve symptom detection.
-        - Refine your thresholds and rules based on observed behavior and operational needs.
+- Define alert thresholds and rules:
+    - Set thresholds based on historical data and expected behavior.
+    - Define alert rules in Prometheus to trigger alerts when thresholds are crossed.
+    - Configure Alertmanager to route alerts to the appropriate channels (e.g., Slack, email, PagerDuty).
+- Set up automated workflows to trigger remediation actions based on specific alerts.
+- Prioritize alerts based on severity:
+    - Utilize multi-level alerting based on severity.
+    - Focus on higher-severity alerts that require immediate attention.
+    - Investigate and resolve lower-severity alerts before they escalate.
+- Review:
+    - Regularly review the effectiveness of your monitoring system and alert rules.
+    - Analyze historical data to identify potential gaps and improve symptom detection.
+    - Refine your thresholds and rules based on observed behavior and operational needs.
 Benefits:
-    - Improved incident response times
-    - Proactive problem identification and resolution
-    - Reduced downtime and service disruptions
-    - Increased application performance and reliability
-    - Enhanced visibility into your Kubernetes environment
+- Improved incident response times
+- Proactive problem identification and resolution
+- Reduced downtime and service disruptions
+- Increased application performance and reliability
+- Enhanced visibility into your Kubernetes environment
 
 Additions that would improve the design:
 - Running AWS Inspector to continually assess vulnerabilities and alignment with security best practices.
