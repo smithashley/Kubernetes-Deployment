@@ -72,9 +72,9 @@ Proactive approach to monitor the cluster for symptoms that indicate potential i
     - Regularly review the effectiveness of your monitoring system and alert rules.
     - Analyze historical data to identify potential gaps and improve symptom detection.
     - Refine your thresholds and rules based on observed behavior and operational needs.
-Benefits:
-- Improved incident response times
-- Proactive problem identification and resolution
-- Reduced downtime and service disruptions
-- Increased application performance and reliability
-- Enhanced visibility into your Kubernetes environment
+- Benefits:
+    - Improved incident response times
+    - Proactive problem identification and resolution
+    - Reduced downtime and service disruptions
+    - Increased application performance and reliability
+    - Enhanced visibility into your Kubernetes environment
