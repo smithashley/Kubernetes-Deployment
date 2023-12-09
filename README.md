@@ -1,34 +1,39 @@
-# Retail Store UI Deployment and Monitoring 
-This project consists of the deployment of the UI of a secure application on an EKS cluster complete with monitoring of metrics, and load simulation to test monitoring and auto scaling. 
+# Static Website Deployment and Monitoring 
+This project consists of the deployment of a static website on an EKS cluster complete with monitoring of metrics, and load simulation to test monitoring and auto scaling. 
 
 ![](https://github.com/smithashley/Tea-Store/blob/main/embedded_images/website.PNG)
 
 ## Details of the Deployment
-- Create CI/CD pipelines for the deployment of the Kubernetes cluster, UI of the app, Prometheus, Grafana, VPC, and ALB
 - Configure VPC, Subnets, and Security Groups 
 - Deploy cluster
-    - Configure EKS cluster with private endpoint
-    - Deploy worker nodes onto private subnets
-    - Deny all global policy, then allow port 53 egress to kube-system
-    - Set up Role Based Access Control using IAM roles for service accounts (least privilege)
-      - Service Accounts for Pods
-      - Service Role for Prometheus
-      - Service Role for Grafana
-      - Admin 
-      - Developers
-      - ReadOnly
-- Deploy UI 
+    - Configure EKS cluster within private endpoint
+- Install Helm
+- Deploy ArgoCD using Helm
+- Deploy Prometheus operator using Helm
+- Deploy static website using ArgoCD
+  ```
+  apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: website-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/smithashley/Tea-Store.git
+    targetRevision: HEAD
+    path: website
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: staging
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      allowEmpty: false     
     - Horizontal or Vertical Pod Auto scaler
-    - SGs, restrict pod access to instance metadata service, use netpol to restrict network traffic within cluster
-- Set up monitoring
-    - Install Prometheus
-    - Deploy Prometheus operator and services and write CR for monitoring
-    - Deploy Grafana
-- Set up LB
-    - Configure service
-    - ALB controller 
-    - Route53
-    - WAF
+    ```
+- Deploy application load balancer controller using Helm
 - Run load simulation using Distributed Load Testing
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
