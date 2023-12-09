@@ -49,7 +49,7 @@ spec:
 
 ### Key symptoms to monitor Latency, Errors, and Traffic:
 - Resource utilization: Monitor CPU, memory, and disk usage trends for pods, containers, and nodes. Alert on anomalies that deviate from normal patterns, indicating potential resource bottlenecks.
-  - Application performance: Track metrics like response times, error rates, and request latencies for your applications. Alert on rising trends or spikes, indicating potential performance degradation.
+    - Application performance: Track metrics like response times, error rates, and request latencies for your applications. Alert on rising trends or spikes, indicating potential performance degradation.
 - Pod health: Monitor pod liveness and readiness probes to ensure pods are healthy and functioning. Alert on unhealthy pods to identify potential application issues or infrastructure problems.
 - Configuration changes: Monitor for configuration changes made to deployments, pods, and services. Alert on unexpected changes to identify potential errors or security risks.
 
