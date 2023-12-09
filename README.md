@@ -11,6 +11,7 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Deploy ArgoCD using Helm
 - Deploy Prometheus operator using Helm
 - Deploy static website using ArgoCD
+  
   ```
   apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -33,6 +34,7 @@ spec:
       allowEmpty: false     
     - Horizontal or Vertical Pod Auto scaler
     ```
+    
 - Deploy application load balancer controller using Helm
 - Run load simulation using Distributed Load Testing
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
