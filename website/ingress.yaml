@@ -17,20 +17,3 @@ spec:
                 name: website-service
                 port: 
                   name: http
---
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-    name: alb-ingress-monitor
-    namespace: staging
-metadata:
-  labels:
-    app.kubernetes.io/component: controller
-  name: controller-metrics-monitor
-spec:
-  endpoints:
-    - path: /metrics
-      port: http
-  selector:
-    matchLabels:
-      app.kubernetes.io/component: controller
