@@ -47,7 +47,11 @@ spec:
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
 ## Monitoring
-![](https://github.com/smithashley/Retail-Store-UI-Deployment/blob/main/embedded_images/grafana.png)
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/cluster-headline.PNG)
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/pod-cpu.PNG)
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/pod-memory.PNG)
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/pod-network.PNG)
+
 
 ### Key symptoms to monitor Latency, Errors, and Traffic:
 - Resource utilization: Monitor CPU, memory, and disk usage trends for pods, containers, and nodes. Alert on anomalies that deviate from normal patterns, indicating potential resource bottlenecks.
