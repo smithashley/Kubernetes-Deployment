@@ -13,6 +13,7 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Deployed Prometheus operator using Helm
     -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack/
 - Deployed static website using ArgoCD using Custom Resource
+![](https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG)
   
 ```
 apiVersion: argoproj.io/v1alpha1
