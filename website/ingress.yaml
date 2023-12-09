@@ -27,7 +27,7 @@ metadata:
 spec:
   endpoints:
     - path: /metrics
-      port: https
+      port: http
   selector:
     matchLabels:
       app.kubernetes.io/component: controller
