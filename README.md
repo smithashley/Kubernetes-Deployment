@@ -6,12 +6,13 @@ This project consists of the deployment of a static website on an EKS cluster co
 ## Steps
 - Configured VPC, Subnets, and Security Groups 
 - Deployed cluster
-    - Configure EKS cluster within private endpoint
 - Installed Helm
     - https://helm.sh/ 
 - Deployed ArgoCD using Helm
+    - https://artifacthub.io/packages/helm/argo/argocd-apps 
 - Deployed Prometheus operator using Helm
-- Deployed static website using ArgoCD
+    -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack
+- Deployed static website using ArgoCD using Custom Resource
   
 ```
 apiVersion: argoproj.io/v1alpha1
@@ -36,7 +37,8 @@ spec:
     - Horizontal or Vertical Pod Auto scaler
 ```
     
-- Deployed application load balancer controller using Helm
+- Deployed Application Load Balancer controller using Helm
+    - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller 
 - Run load simulation using Distributed Load Testing
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
