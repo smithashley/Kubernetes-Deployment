@@ -8,6 +8,7 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Deployed cluster
     - Configure EKS cluster within private endpoint
 - Installed Helm
+    - https://helm.sh/ 
 - Deployed ArgoCD using Helm
 - Deployed Prometheus operator using Helm
 - Deployed static website using ArgoCD
