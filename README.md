@@ -14,10 +14,11 @@ This project consists of the deployment of a static website on an EKS cluster co
 - Installed Helm chart for the Prometheus operator
     -  https://artifacthub.io/packages/helm/prometheus-community/kube-prometheus-stack/
 - Deployed static website using ArgoCD
-- This deployment is complete with a horizontal pod autoscaler, service, service monitor, and ingress
+    - This deployment is complete with a horizontal pod autoscaler, service, service monitor, and ingress
+  
   <img src="https://github.com/smithashley/Kubernetes-Deployment-1/blob/main/embedded_images/argo-app.PNG" width=95% height=95%>
   
-  - Custom Object
+    - Custom Object
  
 ```
 apiVersion: argoproj.io/v1alpha1
