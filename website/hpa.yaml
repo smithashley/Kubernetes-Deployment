@@ -4,7 +4,7 @@ metadata:
   name: my-website
 spec:
   scaleTargetRef:
-    apiVersion: extensions/v1beta1
+    apiVersion: apps/v2
     kind: Deployment
     name: my-website
   minReplicas: 2
@@ -13,4 +13,6 @@ spec:
   - type: Resource
     resource:
       name: cpu
-      targetAverageUtilization: 50
+      target:
+        type:
+        averageUtilization: 50
