@@ -43,7 +43,7 @@ spec:
 - Created Service Account for the Load Balancer
 - Installed Helm chart for the AWS Load Balancer Controller
     - https://artifacthub.io/packages/helm/aws/aws-load-balancer-controller/ 
-- Ran load test to simulate traffic
+- Ran 10 minute load test to simulate traffic
     - https://aws.amazon.com/solutions/implementations/distributed-load-testing-on-aws/
 
 ## Monitoring
