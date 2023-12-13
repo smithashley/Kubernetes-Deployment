@@ -19,8 +19,13 @@ spec:
         - name: website
           image: public.ecr.aws/r9u2q4e0/my-static-website:latest
           imagePullPolicy: Always
-          securityContext: 
-            allowPrivilegeEscalation: false 
+          securityContext:
+            allowPrivilegeEscalation: false
+            runAsNonRoot: true
+            capabilities:
+              drop:
+              - ALL
+            readOnlyRootFilesystem: true
           resources:
             limits:
               cpu: 250m
